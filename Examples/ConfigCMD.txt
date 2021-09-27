@@ -1,0 +1,47 @@
+#GENERAL:
+#Comments are marked with this symbol ->'#'
+#Spaces need to be replaced with '$'
+
+
+#[VOCODERAPPLICATION]
+	FILTERLOCATION = Filters
+		#The filepath for the filterfiles 
+	COMMANDINPUT=CMD
+		#COMMANDINPUT=CMD or COMMANDINPUT=OSC
+		#indicates where the application listens to commands (either on console or OSC-Commands)
+	ADRESS=127.0.0.1
+		#Adress for OSC
+	PORT=7000
+		#Port for OSC
+	DELAYBETWEENCOMMANDS=100
+		#the delaytime after which a new command will be processed in ms
+	MAXNUMOFBANDPASSBANDS=AUTO
+		#the maximal amount of bandpassbands the vocoder will use
+		#either MAXNUMOFBANDPASSBANDS=AUTO or e.g MAXNUMOFBANDPASSBANDS=5 or other number
+		#auto means the application will set up the maximum amount of bandpasses automatically based on the existing filters in the specified folder!
+	###STARTCONFIGURATION FOR THE VOCODER
+	ACTIVESTATE=ACTIVE
+		#ACTIVESTATE=ACTIVE or ACTIVESTATE=STANDBY
+	PROCESSINGSTATE=BYPASS
+		#PROCESSINGSTATE=BYPASS or PROCESSINGSTATE=VOCODING
+	INPUTSOURCE=FILEINPUT
+		#INPUTSOURCE=FILEINPUT or INPUTSOURCE=MICROPHONE
+	CARRIER=SINE
+		#CARRIER=SINE or CARRIER=NOISE
+
+#[ASIO]
+	ASIODRIVER=Focusrite$USB$ASIO
+		#if driver is known insert here, otherwise a prompt will be shown to choose one
+		#replace spaces with underscores!!
+		#ASIODRIVER=<DRIVERNAME>
+	BUFFERSIZE=64#16
+		#the internal buffersize for the audioprocessing
+	INPUTCHANNEL=1
+		#which channel the application should be processing as microphone-input
+	OUTPUTCHANNEL=12
+		#which channel the processed audio should be output to
+		#e.g. OUTPUTCHANNEL=12 audio will be output on Channel 1 and 2
+#[FILES]
+	#Put the files that should be loaded at start here
+	#FILENAME=file>Volume
+	FILENAME=test.wav>1.0

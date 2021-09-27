@@ -1,0 +1,3 @@
+27.07.20	Fixed an issue which could cause crashes when started outside of Visual Studio Release Mode
+27.07.20	Fixed an issue which could cause crashes when loading nonexisting files
+15.07.20	Release

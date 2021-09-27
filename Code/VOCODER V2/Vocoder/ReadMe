@@ -1,0 +1,20 @@
+Vocoder:
+If you just want to use the .exe either start it with Application.exe -f configfile.config -d driver
+or just by double clicking on it.
+
+If you want to change it with Visual Studio, use Version 2019.
+Set the following parameter in the projectproperties:
+	Configuration Properties->Advanced->Character Set
+		Use Multi-Byte Character Set
+	C/C++->Language->C++Language Standard
+		ISO C++17 Standard
+	C/C++->Preprocessor->Preprocessor Definitions
+		_CRT_SECURE_NO_WARNINGS
+		_WINSOCK_DEPRECATED_NO_WARNINGS
+	Linker->Input
+		odbc32.lib
+		odbccp32.lib
+		winmm.lib
+		Ws2_32.lib
+
+ENJOY
