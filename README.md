@@ -1,6 +1,6 @@
 # Vocoder
 
-This is a standalone VisualStudio C++ Project Vocoder, which works with the ASIO SDK
+This is a standalone VisualStudio C++ Project Vocoder
 
 ## Disclaimer
 
